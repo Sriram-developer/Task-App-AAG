@@ -9,18 +9,18 @@ export class TaskService {
   constructor(private _http: HttpClient) {}
 
   addTask(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/tasks', data);
+    return this._http.post('https://task-app-back-aag.onrender.com/tasks', data);
   }
 
   updateTask(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/tasks/${id}`, data);
+    return this._http.put(`https://task-app-back-aag.onrender.com/tasks/${id}`, data);
   }
 
   getTaskList(): Observable<any> {
-    return this._http.get('http://localhost:3000/tasks');
+    return this._http.get('https://task-app-back-aag.onrender.com/tasks');
   }
 
   deleteTask(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/tasks/${id}`);
+    return this._http.delete(`https://task-app-back-aag.onrender.com/tasks/${id}`);
   }
 }

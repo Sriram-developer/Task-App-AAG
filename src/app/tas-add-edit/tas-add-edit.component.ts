@@ -13,11 +13,10 @@ export class TasAddEditComponent implements OnInit {
   tasForm: FormGroup;
 
   education: string[] = [
-    'Matric',
-    'Diploma',
+    'Easy',
+    'Diplomatic',
     'Intermediate',
-    'Graduate',
-    'Post Graduate',
+    'Tough',
   ];
 
   constructor(
