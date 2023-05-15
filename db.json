@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "firstName": "sriram",
+      "lastName": "m",
+      "task": "aggnia angukar task",
+      "due": "2023-05-17T18:30:00.000Z",
+      "status": "finished",
+      "tasklvl": "Intermediate",
+      "company": "ssdsad",
+      "days": 1,
+      "rewards": 5,
+      "id": 1
+    }
+  ]
+}

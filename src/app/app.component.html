@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
-  <span>Crud Application</span>
+  <span>AAGNIA TASK</span>
   <span class="example-spacer"></span>
-  <button mat-raised-button (click)="openAddEditEmpForm()">
-    ADD EMPLOYEE
+  <button mat-raised-button (click)="openAddEditTasForm()">
+    ADD TASK
   </button>
 </mat-toolbar>
 
@@ -35,24 +35,24 @@
         <td mat-cell *matCellDef="let row"> {{row.lastName}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-        <td mat-cell *matCellDef="let row"> {{row.email}}</td>
+      <ng-container matColumnDef="task">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Task </th>
+        <td mat-cell *matCellDef="let row"> {{row.task}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="dob">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> dob </th>
-        <td mat-cell *matCellDef="let row"> {{row.dob | date}}</td>
+      <ng-container matColumnDef="due">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Due Date </th>
+        <td mat-cell *matCellDef="let row"> {{row.due | date}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="gender">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> gender </th>
-        <td mat-cell *matCellDef="let row"> {{row.gender}}</td>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td mat-cell *matCellDef="let row"> {{row.status}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="education">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Education </th>
-        <td mat-cell *matCellDef="let row"> {{row.education}}</td>
+      <ng-container matColumnDef="tasklvl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Task-Lvl </th>
+        <td mat-cell *matCellDef="let row"> {{row.tasklvl}}</td>
       </ng-container>
 
       <ng-container matColumnDef="company">
@@ -60,14 +60,13 @@
         <td mat-cell *matCellDef="let row"> {{row.company}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="experience">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Exp. </th>
-        <td mat-cell *matCellDef="let row"> {{row.experience}}</td>
+      <ng-container matColumnDef="days">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> No.Of.Days </th>
+        <td mat-cell *matCellDef="let row"> {{row.days}}</td>
       </ng-container>
-
-      <ng-container matColumnDef="package">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Package </th>
-        <td mat-cell *matCellDef="let row"> {{row.package | currency:'INR'}}L</td>
+      <ng-container matColumnDef="rewards">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rewards </th>
+        <td mat-cell *matCellDef="let row"> {{row.rewards}} star</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
@@ -76,7 +75,7 @@
           <button mat-icon-button color="primary" (click)="openEditForm(row)">
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button color="warn" (click)="deleteEmployee(row.id)">
+          <button mat-icon-button color="warn" (click)="deleteTask(row.id)">
             <mat-icon>delete</mat-icon>
           </button>
         </td>
